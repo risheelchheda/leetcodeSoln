@@ -1,5 +1,6 @@
-from copy import deepcopy
-        a=deepcopy(matrix)
-        for i in range(len(a)):
-            for j in range(len(a[0])):
-                matrix[i][j]=a[-j-1][i]
+for i in range(len(matrix)):
+            for j in range(i,len(matrix)):
+                matrix[i][j],matrix[j][i]=matrix[j][i],matrix[i][j]
+
+        for i in range(len(matrix)):
+            matrix[i]=matrix[i][::-1]
