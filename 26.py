@@ -1,10 +1,8 @@
-size = len(nums)
-        insertIndex = 1
-        for i in range(1, size):
-            # Found unique element
-            if nums[i - 1] != nums[i]:      
-                # Updating insertIndex in our main array
-                nums[insertIndex] = nums[i] 
-                # Incrementing insertIndex count by 1 
-                insertIndex = insertIndex + 1       
-        return insertIndex
+if not nums: return 0
+        i = 0
+        for j in range(1, len(nums)):
+            if nums[i] != nums[j]:
+                i += 1
+                nums[i] = nums[j]
+        return i + 1
+
